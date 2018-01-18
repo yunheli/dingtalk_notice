@@ -1,0 +1,18 @@
+name: DingTalk-Noticer
+properties:
+  - name: PLUGIN_DINGTALK_API
+    type: string
+    required: true
+
+  - name: PLUGIN_DINGTALK_MESSAGE
+    type: string
+    required: false
+
+image: flowci/plugin-environment:latest
+
+run: |
+  set -e
+  java -jar ./flow-artifact-uploader.jar
+
+build: |
+  mvn clean install -DskipTests=true
