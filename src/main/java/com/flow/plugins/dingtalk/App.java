@@ -42,6 +42,7 @@ public class App {
             exit();
         }
 
+        // message not blank
         if (!Strings.isNullOrEmpty(message)) {
             sendMessage(dingApi, message);
         }
